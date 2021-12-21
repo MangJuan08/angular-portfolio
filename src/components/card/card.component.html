@@ -1,28 +1,42 @@
 <mat-card class="example-card">
-  <img mat-card-image [src]="imageUrl" alt="Photo of a Shiba Inu" />
+   
+  <img mat-card-image [src]="imageUrl" alt="Photo of a Shiba Inu" class='image clip-circle' />
   <mat-card-content>
-    <h2 style="text-align: center">{{ valueShow }}</h2>
+    <h4 style="text-align: center; font-weight: lighter">{{ valueShow }}</h4>
     <h1 style="text-align: center">
       <b>{{ details }}</b>
     </h1>
+    <!--mouseleave must be implement-->
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link a" (mouseover)="changeText('persona')"><mat-icon>account_circle</mat-icon></a>
+        <a class="nav-link links" (mouseover)="changeText('persona')"
+          ><mat-icon>account_circle</mat-icon></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link b" (mouseover)="changeText('numero')"><mat-icon>smartphone</mat-icon></a>
+        <a class="nav-link links" (mouseover)="changeText('numero')"
+          ><mat-icon>smartphone</mat-icon></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link c" (mouseover)="changeText('location')"><mat-icon>home</mat-icon></a>
+        <a class="nav-link links" (mouseover)="changeText('location')"
+          ><mat-icon>home</mat-icon></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link d" (mouseover)="changeText('email')"><mat-icon> email</mat-icon></a>
+        <a class="nav-link links" (mouseover)="changeText('email')"
+          ><mat-icon> email</mat-icon></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link e" (mouseover)="changeText('bday')"><mat-icon>cake</mat-icon></a>
+        <a class="nav-link links" (mouseover)="changeText('bday')"
+          ><mat-icon>cake</mat-icon></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link f" (mouseover)="changeText('password')"><mat-icon>security</mat-icon></a>
+        <a class="nav-link links" (mouseover)="changeText('password')"
+          ><mat-icon>lock</mat-icon></a
+        >
       </li>
     </ul>
   </mat-card-content>

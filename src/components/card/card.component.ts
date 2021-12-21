@@ -1,26 +1,27 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { formatDate } from "@angular/common";
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() first: String="";
-  @Input() last: String="";
-  @Input() imageUrl: String="";
-  @Input() titleP: String="";
-  @Input() location: String="";
-  @Input() numero: String="";
-  @Input() bday: String="";
-  @Input() email: String="";
-  @Input() pass: String="";
-  public valueShow:String="";
-  public details:String="";
+  @Input() first: String = "";
+  @Input() last: String = "";
+  @Input() imageUrl: String = "";
+  @Input() titleP: String = "";
+  @Input() location: String = "";
+  @Input() numero: String = "";
+  @Input() bday: String = "";
+  @Input() email: String = "";
+  @Input() pass: String = "";
+  public valueShow: String = "";
+  public details: String = "";
+
 
   constructor() {
-    this.details=this.first
-   }
+
+  }
 
   ngOnInit(): void {
     console.log(this.first)
@@ -29,33 +30,38 @@ export class CardComponent implements OnInit {
     console.log(this.email)
     console.log(this.pass)
   }
-  
 
-  changeText(val:String) {
-    if(val==='persona') {
-    this.valueShow="my name is";
-    this.details= this.titleP+"." + " " + this.first + this.last;
+
+  changeText(val: String) {
+    if (val === 'persona') {
+      this.valueShow = "Hi, My name is";
+      this.details = this.titleP + "." + " " + this.first + this.last;
     }
-    else if(val==='numero'){
-      this.valueShow="my number is";
-      this.details= this.numero;
+    else if (val === 'numero') {
+      this.valueShow = "My number is";
+      this.details = this.numero;
     }
-    else if(val==='location'){
-      this.valueShow="my location is";
-      this.details= this.location;
+    else if (val === 'location') {
+      this.valueShow = "My location is";
+      this.details = this.location;
     }
-    else if(val==='email'){
-      this.valueShow="my email is";
-      this.details= this.email;
+    else if (val === 'email') {
+      this.valueShow = "My email is";
+      this.details = this.email;
     }
-    else if(val==='bday'){
-      this.valueShow="my birthday is";
-      this.details= this.bday;
+    else if (val === 'bday') {
+      this.valueShow = "My birthday is";
+      this.details = this.bday;
     }
-    else if(val==='password'){
-      this.valueShow="my password is";
-      this.details= this.pass;
+    else if (val === 'password') {
+      this.valueShow = "My password is";
+      this.details = this.pass;
     }
+  }
+
+  disableData() {
+    this.valueShow="";
+    this.details=""
   }
 
 }
