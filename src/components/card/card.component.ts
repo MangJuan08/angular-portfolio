@@ -6,17 +6,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() first: String='';
-  @Input() last: String='';
-  @Input() imageUrl: String='';
-  @Input() titleP: String='';
-  @Input() location: String='';
-  @Input() numero: String='';
-  public valueShow:String="my name is";
-  public details:String=this.titleP+"." + " " + this.first + this.last;;
+  @Input() first: String="";
+  @Input() last: String="";
+  @Input() imageUrl: String="";
+  @Input() titleP: String="";
+  @Input() location: String="";
+  @Input() numero: String="";
+  public valueShow:String="";
+  public details:String="";
 
   constructor() {
-
+    this.details=this.first
    }
 
   ngOnInit(): void {
