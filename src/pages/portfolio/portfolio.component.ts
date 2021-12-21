@@ -1,12 +1,8 @@
 import { RandomusersService } from './../../services/randomusers.service';
 import { Component, OnInit } from '@angular/core';
+import { Person } from 'src/models/Persona';
 
-export interface Person {
-  titleP:string;
-  firstName:String;
-  lastName:string;
-  imageUrl:string;
-}
+
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -27,13 +23,11 @@ public person:Person;
       lastName:'',
       imageUrl:''
     }
-
    }
 
   ngOnInit(): void {
     this.service.getRandomUser().subscribe((data) => {
       this.res = data;
-      console.log(this.res)
       this.person.imageUrl = this.res.results[0].picture.large;
       this.person.firstName = this.res.results[0].name.first;
       this.person.lastName = this.res.results[0].name.last;
