@@ -26,7 +26,10 @@ export class PortfolioComponent implements OnInit {
       lastName: this.results.results[0].name.last,
       imageUrl: this.results.results[0].picture.large,
       location: this.results.results[0].location.country,
-      numero:this.results.results[0].cell
+      numero:this.results.results[0].cell,
+      email:this.results.results[0].email,
+      bday:this.results.results[0].dob.date,
+      pass:this.results.results[0].login.password
     }
   }
 

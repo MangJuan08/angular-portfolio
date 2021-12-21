@@ -5,4 +5,7 @@ export interface Person {
     imageUrl:String;
     location:String;
     numero:String;
+    email:String;
+    bday:String;
+    pass:String;
   }
