@@ -6,9 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() first: string='';
-  @Input() last: string='';
-  @Input() imageUrl: string='';
+  @Input() first: String='';
+  @Input() last: String='';
+  @Input() imageUrl: String='';
+  @Input() titleP: String='';
   constructor() { }
 
   ngOnInit(): void {
