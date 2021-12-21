@@ -1,3 +1,4 @@
+import { ResolverService } from './../services/resolver.service';
 import { CardComponent } from './../components/card/card.component';
 import { MaterialModule } from './material.module';
 import { PortfolioComponent } from './../pages/portfolio/portfolio.component';
@@ -23,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [ResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

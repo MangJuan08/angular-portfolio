@@ -1,22 +1,17 @@
 <mat-card class="example-card">
   <img mat-card-image [src]="imageUrl" alt="Photo of a Shiba Inu" />
   <mat-card-content>
-    <p style="text-align:center;"><b>{{titleP}}. {{ first }} {{ last }}</b></p>
+      <h2 style="text-align:center;">{{valueShow}}</h2>
+    <h1 style="text-align:center;"><b>{{details}}</b></h1>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link a" href="#" (mouseover)="changeText('persona')">Name</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link b" href="#" (mouseover)="changeText('numero')">Number</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link c" href="#" (mouseover)="changeText('location')">Link</a>
       </li>
     </ul>
   </mat-card-content>

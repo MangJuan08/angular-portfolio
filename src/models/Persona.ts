@@ -1,6 +1,8 @@
 export interface Person {
-    titleP:string;
+    titleP:String;
     firstName:String;
-    lastName:string;
-    imageUrl:string;
+    lastName:String;
+    imageUrl:String;
+    location:String;
+    numero:String;
   }

@@ -1,7 +1,8 @@
 import { RandomusersService } from './../../services/randomusers.service';
 import { Component, OnInit } from '@angular/core';
 import { Person } from 'src/models/Persona';
-
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,26 +14,23 @@ import { Person } from 'src/models/Persona';
 export class PortfolioComponent implements OnInit {
 
 
-public res:any;
-public person:Person;
+  public results: any;
+  public person: Person;
 
-  constructor(private service:RandomusersService) {
+  constructor(private service: RandomusersService, private ac: ActivatedRoute) {
+    this.ac.data.pipe(map((data: any) => this.results=data.user)
+    ).subscribe((res) => console.log(res));
     this.person = {
-      titleP:'',
-      firstName:'',
-      lastName:'',
-      imageUrl:''
+      titleP: this.results.results[0].name.title,
+      firstName: this.results.results[0].name.first,
+      lastName: this.results.results[0].name.last,
+      imageUrl: this.results.results[0].picture.large,
+      location: this.results.results[0].location.country,
+      numero:this.results.results[0].cell
     }
-   }
+  }
 
   ngOnInit(): void {
-    this.service.getRandomUser().subscribe((data) => {
-      this.res = data;
-      this.person.imageUrl = this.res.results[0].picture.large;
-      this.person.firstName = this.res.results[0].name.first;
-      this.person.lastName = this.res.results[0].name.last;
-      this.person.titleP = this.res.results[0].name.title;
-    } );
   }
 
 }

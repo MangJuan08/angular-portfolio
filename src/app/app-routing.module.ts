@@ -1,10 +1,13 @@
+import { ResolverService } from './../services/resolver.service';
 import { PortfolioComponent } from './../pages/portfolio/portfolio.component';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: PortfolioComponent}
+  { path: '', component: PortfolioComponent, resolve: {
+    user: ResolverService
+  }}
 ];
 
 @NgModule({
