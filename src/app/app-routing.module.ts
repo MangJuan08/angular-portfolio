@@ -1,4 +1,5 @@
-import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { PortfolioComponent } from './../pages/portfolio/portfolio.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
