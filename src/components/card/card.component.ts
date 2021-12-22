@@ -55,7 +55,6 @@ export class CardComponent implements OnInit {
       this.valueShow = "My birthday is";
       let res = new Date(Date.parse(this.bday)).toLocaleDateString();
       this.details = res;
-
     }
     else if (val === 'password') {
       this.valueShow = "My password is";
