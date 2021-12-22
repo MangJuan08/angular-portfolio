@@ -26,9 +26,8 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   
-  }
 
+  }
 
   changeText(val: String) {
     if (val === 'persona') {
@@ -57,12 +56,4 @@ export class CardComponent implements OnInit {
       this.details = this.pass;
     }
   }
-
-  disableData() {
-    this.valueShow = "";
-    this.details = ""
-  }
-
-
-
 }
