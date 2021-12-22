@@ -26,11 +26,7 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.first)
-    console.log(this.location)
-    console.log(this.bday)
-    console.log(this.email)
-    console.log(this.pass)
+   
   }
 
 
