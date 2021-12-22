@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { formatDate } from "@angular/common";
+import * as moment from 'moment';
+import { parse, format } from 'date-fns';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -12,7 +14,7 @@ export class CardComponent implements OnInit {
   @Input() titleP: String = "";
   @Input() location: String = "";
   @Input() numero: String = "";
-  @Input() bday: String = "";
+  @Input() bday: any;
   @Input() email: String = "";
   @Input() pass: String = "";
   public valueShow: String = "";
@@ -51,7 +53,9 @@ export class CardComponent implements OnInit {
     }
     else if (val === 'bday') {
       this.valueShow = "My birthday is";
-      this.details = this.bday;
+      let res = new Date(Date.parse(this.bday)).toLocaleDateString();
+      this.details = res;
+
     }
     else if (val === 'password') {
       this.valueShow = "My password is";
@@ -60,8 +64,10 @@ export class CardComponent implements OnInit {
   }
 
   disableData() {
-    this.valueShow="";
-    this.details=""
+    this.valueShow = "";
+    this.details = ""
   }
+
+
 
 }

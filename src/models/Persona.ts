@@ -6,6 +6,6 @@ export interface Person {
     location:String;
     numero:String;
     email:String;
-    bday:String;
+    bday:Date;
     pass:String;
   }
