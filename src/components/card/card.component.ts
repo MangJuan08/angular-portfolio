@@ -32,7 +32,7 @@ export class CardComponent implements OnInit {
   changeText(val: String) {
     if (val === 'persona') {
       this.valueShow = "Hi, My name is";
-      this.details = this.titleP + "." + " " + this.first + this.last;
+      this.details = this.titleP + "." + " " + this.first + " " + this.last;
     }
     else if (val === 'numero') {
       this.valueShow = "My number is";
