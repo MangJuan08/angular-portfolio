@@ -60,6 +60,12 @@ export class CardComponent implements OnInit {
         break;
     }
 
+
+  }
+}
+
+
+
     /*if (val === 'persona') {
       this.valueShow = "Hi, My name is";
       this.details = this.titleP + " " + this.first + " " + this.last;
@@ -85,5 +91,3 @@ export class CardComponent implements OnInit {
       this.valueShow = "My password is";
       this.details = this.pass;
     }*/
-  }
-}
