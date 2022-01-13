@@ -69,8 +69,6 @@ export class CardComponent implements OnInit {
       default:
         break;
     }
-
-
   }
 }
 
