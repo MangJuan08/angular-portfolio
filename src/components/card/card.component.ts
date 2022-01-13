@@ -30,7 +30,37 @@ export class CardComponent implements OnInit {
   }
 
   changeText(val: String) {
-    if (val === 'persona') {
+    switch (val) {
+      case "persona":
+        this.valueShow = "Hi, My name is";
+        this.details = this.titleP + " " + this.first + " " + this.last;
+        break;
+      case "numero":
+        this.valueShow = "My number is";
+        this.details = this.numero;
+        break;
+      case "location":
+        this.valueShow = "My location is";
+        this.details = this.location;
+        break;
+      case "email":
+        this.valueShow = "My email is";
+        this.details = this.email;
+        break;
+      case "bday":
+        this.valueShow = "My birthday is";
+        let parseDate = new Date(Date.parse(this.bday)).toLocaleDateString();
+        this.details = parseDate;
+        break;
+      case "password":
+        this.valueShow = "My password is";
+        this.details = this.pass;
+        break;
+      default:
+        break;
+    }
+
+    /*if (val === 'persona') {
       this.valueShow = "Hi, My name is";
       this.details = this.titleP + " " + this.first + " " + this.last;
     }
@@ -54,6 +84,6 @@ export class CardComponent implements OnInit {
     else if (val === 'password') {
       this.valueShow = "My password is";
       this.details = this.pass;
-    }
+    }*/
   }
 }
