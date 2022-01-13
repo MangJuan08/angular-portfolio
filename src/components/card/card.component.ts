@@ -8,21 +8,31 @@ import { parse, format } from 'date-fns';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() first: String = "";
-  @Input() last: String = "";
-  @Input() imageUrl: String = "";
-  @Input() titleP: String = "";
-  @Input() location: String = "";
-  @Input() numero: String = "";
+  @Input() first: String;
+  @Input() last: String;
+  @Input() imageUrl: String;
+  @Input() titleP: String;
+  @Input() location: String;
+  @Input() numero: String;
   @Input() bday: any;
-  @Input() email: String = "";
-  @Input() pass: String = "";
-  public valueShow: String = "";
-  public details: String = "";
+  @Input() email: String;
+  @Input() pass: String;
+  public valueShow: String;
+  public details: String;
 
 
   constructor() {
-
+    this.first = " ";
+    this.last = " ";
+    this.imageUrl= " ";
+    this.titleP= " ";
+    this.location= " ";
+    this.numero= " ";
+    this.bday= " ";
+    this.email= " ";
+    this.pass= " ";
+    this.valueShow= " ";
+    this.details= " ";
   }
 
   ngOnInit(): void {
